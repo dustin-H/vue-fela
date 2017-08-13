@@ -1,6 +1,6 @@
 {
   "name": "vue-fela",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Fela bindings for vue",
   "author": "Dustin Hoffner",
   "main": "dist/vue-fela.common.js",
