@@ -9,9 +9,11 @@ var resetRendering = true
 var renderedString = null
 var alreadyRenderedInClient = false
 var renderer = null
+var felaConfig = null
 
-export function createRenderer(felaConfig) {
-  renderer = createRenderer(felaConfig)
+export function createFelaRenderer(fConfig) {
+  felaConfig = fConfig
+  renderer = createRenderer(fConfig)
 }
 
 export function renderToString() {
@@ -33,7 +35,7 @@ export function renderToString() {
 
 }
 
-export function renderStyles(rules) {
+export function renderFelaStyles(rules) {
   return function render() {
     if (resetRendering === true && isServer) {
       renderer = createRenderer(felaConfig)

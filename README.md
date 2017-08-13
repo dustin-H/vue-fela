@@ -16,11 +16,13 @@ npm install --save vue-fela
 
 ```js
 import Vue from 'vue'
-import vue-fela from 'vue-fela'
-// You need a specific loader for CSS files like https://github.com/webpack/css-loader
-import 'vue-fela/dist/vue-fela.css'
+import { getFelaPlugin } from 'vue-fela'
 
-Vue.use(vue-fela)
+const felaConfig = {
+  /* ... */
+}
+
+Vue.use(getFelaPlugin(felaConfig))
 ```
 
 ### Browser
@@ -34,6 +36,66 @@ Vue.use(vue-fela)
 <!-- From CDN -->
 <link rel="stylesheet" href="https://unpkg.com/vue-fela/dist/vue-fela.css"></link>
 <script src="https://unpkg.com/vue-fela"></script>
+```
+
+### Usage in component
+
+`index.vue`
+
+```vue
+<template>
+<div :class="styles.box">
+  Some Stuff
+</div>
+</template>
+
+<script>
+import { renderStyles } from 'vue-fela'
+import styles from './style.js'
+
+export default {
+  computed: {
+    styles: renderStyles(styles)
+  }
+}
+</script>
+```
+
+`style.js`
+
+```js
+
+var styles = {
+  h1: {
+    display: 'block',
+    textAlign: 'left',
+    fontFamily: 'Helvetica',
+    fontWeight: 600,
+    fontSize: 32,
+    color: 'black',
+    marginTop: 10
+  }
+}
+
+export default styles
+
+```
+
+### Nuxt Server rendering
+
+Just use the `<fela-provider/>` component at the end of rendering.
+
+In nuxtjs I personally use it in the layouts:
+
+`layouts/default.vue`
+
+```vue
+<template>
+  <div>
+    <nuxt/>
+    <fela-provider/>
+  </div>
+</template>
 ```
 
 ## Development
