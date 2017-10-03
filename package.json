@@ -1,6 +1,6 @@
 {
   "name": "vue-fela",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Fela bindings for vue",
   "author": "Dustin Hoffner",
   "main": "dist/vue-fela.common.js",
@@ -105,7 +105,9 @@
     "yarn-or-npm": "^2.0.0"
   },
   "peerDependencies": {
-    "vue": "^2.3.0"
+    "vue": "^2.3.0",
+    "fela": "^4.3.5",
+    "fela-dom": "^4.3.5"
   },
   "dllPlugin": {
     "name": "vuePluginTemplateDeps",

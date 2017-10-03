@@ -66,7 +66,7 @@ export default {
 ```js
 
 var styles = {
-  h1: {
+  box: {
     display: 'block',
     textAlign: 'left',
     fontFamily: 'Helvetica',
