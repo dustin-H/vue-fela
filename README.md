@@ -1,6 +1,6 @@
 # Deprecated!
 
-This project has not been maintained for a while. Matthew Wagerfield created a new and more advanced version which has been published with the same name: https://github.com/wagerfield/vue-fela.
+This project has not been maintained for a while. Matthew Wagerfield created a new and more advanced version which has been published with the same name: [wagerfield/vue-fela](https://github.com/wagerfield/vue-fela).
 
 If you want to use the old version just install `vue-fela@0.0.4`.
 
